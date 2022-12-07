@@ -1,6 +1,6 @@
 $(function(){
 	
-    // �ܹ��Ÿ޴�  �κ�
+    // header
 	$(function(){
          $(".hamburger").click(function(){
 		     $(".gnb").slideToggle("slow", function(){
@@ -18,16 +18,16 @@ $(function(){
 		 
 	   });
 		
-    //�޴� ������
+    //menu button
 	$(".gnb >ul >li> a").click(function(){
 		if($(this).next().is(":visible")){
 			$(this).next().stop().slideUp(500);
-			$(this).children("img").attr("src", "image/arrow_down.png");
+			$(this).children("img").attr("src", "img/arrow_down.png");
 			}else{
 				$(".sub").stop().slideUp(500);
-				$(".gnb >ul >li> a").children("img").attr("src","image/arrow_down.png");
+				$(".gnb >ul >li> a").children("img").attr("src","img/arrow_down.png");
 			    $(this).next().stop().slideDown(500);
-			    $(this).children("img").attr("src","image/arrow_up.png");
+			    $(this).children("img").attr("src","img/arrow_up.png");
 				};	
 		});
 	
@@ -47,14 +47,13 @@ $(function(){
 	
 	$('.scrolltop ul a').click(function(e){
 		$.scrollTo(this.hash||0, 1500);
-		 // #(�ؽ�)�� �ִ� ��ġ. �� Ŭ���� �ؽ� ���� ���� �������� ��ũ����
 		e.preventDefault();
 	});
 
 
 	
 
-	// �α��ǰ bx slide
+	// 이번주 인기상품 bx slide
 	$(".slide_box").bxSlider({
          minSlides: 3,
          maxSlides: 3,

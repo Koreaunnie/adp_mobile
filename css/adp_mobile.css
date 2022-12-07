@@ -23,9 +23,9 @@ header{width: 375px; height:80px; background: #ffb500; position: fixed; left: 50
 header h1{font-family: 'Lexend Exa', sans-serif; font-size: 1.5rem; color: #000;
           line-height :80px; box-sizing: border-box;} 
 .search{background: none; outline: none; border: 0; width: 35px;
-        position: absolute; top: 28px; left: 10px;}
+        position: absolute; top: 28px; left: 10px; cursor: pointer;}
 .hamburger{background: none; outline: none; border: 0; width: 35px;
-           position: absolute; top: 28px; right: 10px;}
+           position: absolute; top: 28px; right: 10px; cursor: pointer;}
 
 		   
 		   
@@ -33,6 +33,9 @@ header h1{font-family: 'Lexend Exa', sans-serif; font-size: 1.5rem; color: #000;
 input{width: 90%; background:#ffb500; border-radius: 0; height: 40px; margin-top: 80px;
       border: 3px solid #000; box-sizing: border-box; transition: all 0.5s; margin-bottom: 15px; padding-left: 10px;}	
 input:focus{border: 2px solid #000; outline: none;}
+input::placeholder{color: #000;}
+input::-webkit-input-placeholder {color: #000;}
+input:-ms-input-placeholder {color: #000;}
 
 .gnb{display:none; background:#ffb500; width: 375px; position:fixed; left: 50%; transform: translateX(-50%); z-index: 9999;}
 .gnb>ul>li{font-family: 'Lexend Exa', sans-serif; padding-top:20px; padding-bottom:20px;}
@@ -279,7 +282,7 @@ input:focus{border: 2px solid #000; outline: none;}
   animation-duration:1s;
 }
 
-@-webkit-keyframes fadeInUp {
+@keyframes fadeInUp {
   0% {
     -webkit-transform: translateY(130px);
     transform: translateY(130px);
